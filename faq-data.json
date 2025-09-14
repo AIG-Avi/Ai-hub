@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is AI?",
+    "answer": "Artificial Intelligence (AI) is the capability of machines to perform tasks requiring human intelligence, such as reasoning, learning, and problem-solving. (Source: Wikipedia)"
+  },
+  {
+    "question": "What are common applications of AI?",
+    "answer": "AI powers web search (Google, Bing), recommender systems (Netflix, YouTube), virtual assistants (Siri, Alexa, Google Assistant), autonomous vehicles, and more."
+  },
+  {
+    "question": "What is the difference between AI and Machine Learning?",
+    "answer": "AI is a broad field focused on creating intelligent machines. Machine Learning is a subset of AI that enables systems to learn from data and improve over time without explicit programming."
+  },
+  {
+    "question": "What are some free AI tools?",
+    "answer": "Free AI tools include ChatGPT (GPT-3.5), Google Bard, and Hugging Face Transformers. Many open-source libraries like TensorFlow and PyTorch are also free."
+  },
+  {
+    "question": "What are some paid AI services?",
+    "answer": "Paid AI services include ChatGPT Plus (GPT-4), GitHub Copilot, DALL-E, Midjourney, and enterprise APIs for advanced models and features."
+  },
+  {
+    "question": "Who are the major AI companies?",
+    "answer": "Major AI companies include OpenAI, DeepMind, Google AI, Microsoft AI, Baidu, IBM Watson, and Element AI."
+  },
+  {
+    "question": "What is Generative AI?",
+    "answer": "Generative AI refers to models that can create new content, such as text, images, or music. Examples include DALL-E, Midjourney, Stable Diffusion, and ChatGPT."
+  },
+  {
+    "question": "How popular is AI?",
+    "answer": "About 55% of organizations use AI technology in some form, powering everything from recommendation engines to smart assistants. (Source: builtin.com)"
+  },
+  {
+    "question": "What are the main domains of AI?",
+    "answer": "Main AI domains include Machine Learning, Natural Language Processing (NLP), Computer Vision, and Generative AI."
+  },
+  {
+    "question": "Is AI safe and secure?",
+    "answer": "Responsible AI development includes data security, privacy, and ethical guidelines. Always use trusted services and be aware of privacy policies."
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hub – Futuristic AI Platform</title>
+  <!-- Official Tailwind CDN for full utility support -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var testDiv = document.createElement('div');
+      testDiv.className = 'bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white p-4 text-center';
+      testDiv.textContent = 'If you see this box with a gradient and white text, Tailwind CSS is working!';
+      document.body.appendChild(testDiv);
+      var style = getComputedStyle(testDiv);
+      if (style.backgroundImage === 'none' || style.color !== 'rgb(255, 255, 255)') {
+        testDiv.textContent = 'Tailwind CSS is NOT loading. Please check your internet connection or CDN access.';
+        testDiv.style.background = '#ffdddd';
+        testDiv.style.color = '#900';
+      }
+      setTimeout(function() { testDiv.remove(); }, 5000);
+    });
+  </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 min-h-screen font-inter">
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 shadow-lg">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+      <div class="flex items-center gap-3">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="AI Hub Logo" class="h-12 w-12 shadow rounded-xl">
+        <span class="text-3xl font-extrabold text-blue-700 dark:text-purple-400 tracking-tight ml-4">AI Hub</span>
+      </div>
+      <ul class="hidden md:flex gap-8 text-lg font-semibold">
+        <li><a href="index.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">Home</a></li>
+        <li><a href="ai-tools.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">AI Tools</a></li>
+        <li><a href="ai-companies.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">Companies</a></li>
+        <li><a href="ai-history.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">History</a></li>
+        <li><a href="ai-research.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">Research</a></li>
+        <li><a href="about.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600 dark:hover:text-purple-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="w-full py-20 px-4 flex flex-col items-center justify-center">
+    <div class="max-w-3xl text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-white drop-shadow-lg leading-tight">Welcome to the AI Hub</h1>
+      <p class="text-lg md:text-2xl mb-8 text-gray-200">Your one-stop platform for AI knowledge, tools, news, and research. Built for tech enthusiasts, researchers, and everyone curious about the future.</p>
+      <a href="ai-tools.html" class="inline-block px-10 py-4 bg-blue-700 text-white rounded-2xl font-semibold shadow-lg hover:bg-blue-800 transition text-xl">Explore Now</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Futuristic AI Illustration" class="mt-12 rounded-3xl shadow-2xl w-full max-w-2xl border-2 border-blue-700" />
+  </section>
+  <!-- Footer -->
+  <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-800 py-8 px-8 mt-8 rounded-xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex gap-6 mb-4 md:mb-0">
+        <a href="ai-tools.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">AI Tools</a>
+        <a href="ai-companies.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">Companies</a>
+        <a href="ai-history.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">History</a>
+        <a href="ai-research.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">Research</a>
+        <a href="about.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">About</a>
+        <a href="contact.html" class="hover:text-blue-700 dark:hover:text-purple-400 transition">Contact</a>
+      </div>
+      <div class="flex gap-4">
+        <a href="#" class="text-blue-700 dark:text-purple-400 text-xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-blue-700 dark:text-purple-400 text-xl"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-blue-700 dark:text-purple-400 text-xl"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2025 AI Hub. All rights reserved.</div>
+    </div>
+    <div class="mt-4 text-center text-xs text-gray-400 dark:text-gray-600">Designed for tech enthusiasts, researchers, and AI learners.</div>
+  </footer>
+</body>
+</html>

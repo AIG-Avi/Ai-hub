@@ -1,0 +1,25 @@
+# Pre-commit configuration for AI Hub project
+# Enforces formatting, secret detection, and Python security checks
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+  - repo: https://github.com/pypa/pip-audit
+    rev: v1.4.3
+    hooks:
+      - id: pip-audit
+        args: [--requirement, requirements.txt]
+        # If you use requirements.txt for dependencies
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: [--recursive, .]
