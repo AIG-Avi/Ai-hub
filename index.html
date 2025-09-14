@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hub – Futuristic AI Platform</title>
+  <!-- Local Tailwind CSS for offline use (ensure this is last in <head>) -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Official Tailwind CDN for full utility support -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom Styles (should be last) -->
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- AOS.js for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .dark .glass {
+      background: rgba(24,24,27,0.45);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .transition-bg { transition: background 0.3s, color 0.3s; }
+      .card-hover {
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 32px 0 rgba(31,38,135,0.22);
+      }
+  </style>
+  <!-- CSP: Loosened for development so Tailwind CDN, Font Awesome, and AOS load. Tighten for production! -->
+  <!-- CSP: Loosened for development so Tailwind CDN, Font Awesome, and AOS load. Tighten for production! -->
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data:; font-src *;">
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 dark:bg-gradient-to-br dark:from-gray-900 dark:via-blue-900 dark:to-purple-900 transition-bg min-h-screen relative">
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 glass navbar-animated shadow-lg" id="main-navbar">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4 animate-header rounded-xl">
+      <!-- Logo Area -->
+      <div class="flex items-center gap-3">
+  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="AI Hub Logo" class="h-12 w-12 robot-bounce shadow rounded-xl" />
+  <span class="text-3xl font-extrabold text-blue-700 dark:text-purple-400 tracking-tight ml-4">AI Hub</span>
+      </div>
+      <!-- Navigation Links -->
+  <ul class="hidden md:flex gap-8 text-lg font-semibold">
+        <li><a href="#home" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">Home</a></li>
+        <li><a href="#tools" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">AI Tools</a></li>
+        <li><a href="#news" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">News</a></li>
+        <li><a href="#research" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">Research</a></li>
+        <li><a href="#companies" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">Companies</a></li>
+        <li><a href="#resources" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">Resources</a></li>
+        <li><a href="#contact" class="nav-underline hover:text-blue-600 dark:hover:text-purple-400 transition-all">Contact</a></li>
+      </ul>
+      <!-- Dark/Light Mode Toggle -->
+      <div class="flex items-center gap-4">
+        <button id="mode-toggle" class="text-xl p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-purple-900 transition-colors btn-animate" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+          <i class="fa-solid fa-sun dark:hidden"></i>
+        </button>
+        <button class="md:hidden text-2xl icon-animate"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="w-full py-20 px-4 flex flex-col items-center justify-center bg-gradient-to-r from-blue-900/80 via-purple-900/80 to-gray-900/80 dark:from-gray-900/80 dark:via-blue-900/80 dark:to-purple-900/80 animate-header rounded-3xl shadow-lg mt-8 mb-8" data-aos="fade-up" style="display:block;">
+    <div class="max-w-3xl text-center">
+  <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-white drop-shadow-lg animate-header leading-tight">Welcome to the AI Hub</h1>
+      <p class="text-lg md:text-2xl mb-8 text-gray-200">Your one-stop platform for AI knowledge, tools, news, and research. Built for tech enthusiasts, researchers, and everyone curious about the future.</p>
+      <a href="#tools" class="inline-block px-10 py-4 bg-blue-700/80 text-white dark:bg-purple-600/80 dark:text-white rounded-2xl font-semibold shadow-lg hover:bg-blue-800 dark:hover:bg-purple-700 transition-colors text-xl">Explore Now</a>
+    </div>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Futuristic AI Illustration" class="mt-12 rounded-3xl shadow-2xl w-full max-w-2xl glass btn-animate border-2 border-blue-700" />
+  </section>
+
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12" data-aos="fade-up">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 mb-8">
+  <div class="glass p-8 flex flex-col items-center text-center shadow-lg animate-fadeup delay-100 rounded-xl">
+        <i class="fa-solid fa-robot text-3xl text-blue-500 dark:text-purple-400 mb-4 robot-bounce"></i>
+        <h3 class="font-bold text-lg mb-2">AI Tools</h3>
+        <p class="text-gray-700 dark:text-gray-300">Discover the latest AI-powered apps and platforms for text, image, code, and more.</p>
+      </div>
+  <div class="glass p-8 flex flex-col items-center text-center shadow-lg animate-fadeup delay-200 rounded-xl">
+        <i class="fa-solid fa-newspaper text-3xl text-blue-500 dark:text-purple-400 mb-4 icon-animate"></i>
+        <h3 class="font-bold text-lg mb-2">AI News</h3>
+        <p class="text-gray-700 dark:text-gray-300">Stay updated with the most important headlines and breakthroughs in AI.</p>
+      </div>
+  <div class="glass p-8 flex flex-col items-center text-center shadow-lg animate-fadeup delay-300 rounded-xl">
+        <i class="fa-solid fa-book-open text-3xl text-blue-500 dark:text-purple-400 mb-4 icon-animate"></i>
+        <h3 class="font-bold text-lg mb-2">AI Guides</h3>
+        <p class="text-gray-700 dark:text-gray-300">Learn about AI concepts, applications, and best practices with curated guides.</p>
+      </div>
+  <div class="glass p-8 flex flex-col items-center text-center shadow-lg animate-fadeup delay-400 rounded-xl">
+        <i class="fa-solid fa-flask text-3xl text-blue-500 dark:text-purple-400 mb-4 icon-animate"></i>
+        <h3 class="font-bold text-lg mb-2">AI Research</h3>
+        <p class="text-gray-700 dark:text-gray-300">Explore cutting-edge research, papers, and innovations in artificial intelligence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Tools Showcase -->
+  <section id="tools" class="max-w-7xl mx-auto px-4 py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-white">Featured AI Tools</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Example Tool Card -->
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-comments text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">ChatGPT</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Text/Chat</span>
+        <p class="text-gray-700 dark:text-gray-300">Conversational AI by OpenAI. Free & Paid options.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-image text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">DALL-E</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Image Gen</span>
+        <p class="text-gray-700 dark:text-gray-300">Text-to-image generation by OpenAI. Paid.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-code text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">GitHub Copilot</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Code</span>
+        <p class="text-gray-700 dark:text-gray-300">AI-powered coding assistant by GitHub. Paid.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-brain text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">Google Bard</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Text/Chat</span>
+        <p class="text-gray-700 dark:text-gray-300">Conversational AI by Google. Free.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-robot text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">Claude</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Text/Chat</span>
+        <p class="text-gray-700 dark:text-gray-300">Advanced chatbot by Anthropic. Free & Paid.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+      <div class="glass p-6 flex flex-col gap-2 shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+          <i class="fa-solid fa-microchip text-blue-500 dark:text-purple-400 text-2xl"></i>
+          <span class="font-semibold">NVIDIA GPUs</span>
+        </div>
+        <span class="text-xs bg-blue-100 dark:bg-purple-900 text-blue-700 dark:text-purple-400 px-2 py-1 rounded">Hardware</span>
+        <p class="text-gray-700 dark:text-gray-300">Industry-leading AI hardware.</p>
+        <a href="#" class="text-blue-700 dark:text-purple-400 hover:underline">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI News Feed -->
+  <section id="news" class="max-w-7xl mx-auto px-4 py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-white">Latest AI News</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass p-6 shadow-lg">
+        <h3 class="font-semibold text-lg mb-2 text-blue-700 dark:text-purple-400">Generative AI: The Next Wave</h3>
+        <p class="text-gray-700 dark:text-gray-300">Text-to-image, chatbots, and more are transforming industries.</p>
+      </div>
+      <div class="glass p-6 shadow-lg">
+        <h3 class="font-semibold text-lg mb-2 text-blue-700 dark:text-purple-400">AI in Daily Life</h3>
+        <p class="text-gray-700 dark:text-gray-300">Recommendation engines, smart assistants, and more.</p>
+      </div>
+      <div class="glass p-6 shadow-lg">
+        <h3 class="font-semibold text-lg mb-2 text-blue-700 dark:text-purple-400">AI Ethics & Safety</h3>
+        <p class="text-gray-700 dark:text-gray-300">Responsible development and privacy concerns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Chatbox Button -->
+  <button id="chatbox-float-btn" class="fixed bottom-6 right-6 z-50 bg-blue-700 dark:bg-purple-600 text-white rounded-full shadow-lg p-4 flex items-center gap-2 chat-pulse btn-animate hover:bg-blue-800 dark:hover:bg-purple-900 transition cursor-pointer">
+    <i class="fa-solid fa-robot text-2xl robot-bounce"></i>
+    <span class="font-semibold hidden md:inline">Chat</span>
+  </button>
+  <!-- Chatbox Widget -->
+  <div id="chatbox-widget" class="fixed bottom-24 right-6 z-50 w-80 glass shadow-2xl rounded-2xl hidden flex-col overflow-hidden chatbox-slidein border-2 border-blue-700 dark:border-purple-600" tabindex="-1" aria-modal="true" role="dialog">
+    <div class="flex items-center justify-between bg-blue-700 dark:bg-purple-600 text-white px-4 py-3">
+      <span class="flex items-center gap-2"><i class="fa-solid fa-robot"></i> AI Chatbot</span>
+      <button id="chatbox-close" class="text-2xl">&times;</button>
+    </div>
+    <div id="chatbox-history" class="h-48 overflow-y-auto bg-white dark:bg-gray-900 px-4 py-2 text-sm"></div>
+  <form id="chatbox-form" class="flex gap-2 p-4 bg-white dark:bg-gray-900 rounded-b-2xl">
+  <input type="text" id="chatbox-input" placeholder="Ask anything about AI..." autocomplete="off" class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none text-lg" />
+  <button type="submit" class="px-4 py-2 bg-blue-700 text-white dark:bg-purple-600 rounded-lg hover:bg-blue-800 dark:hover:bg-purple-700 transition-colors btn-animate text-xl cursor-pointer"><span class="material-icons">send</span></button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white/80 dark:bg-gray-900/80 glass border-t border-gray-200 dark:border-gray-800 py-8 px-8 mt-8 animate-fadeup delay-500 rounded-xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex gap-6 mb-4 md:mb-0">
+  <a href="#tools" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">AI Tools</a>
+  <a href="#news" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">News</a>
+  <a href="#research" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">Research</a>
+  <a href="#companies" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">Companies</a>
+  <a href="#resources" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">Resources</a>
+  <a href="#contact" class="nav-underline hover:text-blue-700 dark:hover:text-purple-400 transition-all">Contact</a>
+      </div>
+      <div class="flex gap-4">
+  <a href="#" class="text-blue-700 dark:text-purple-400 text-xl icon-animate"><i class="fab fa-twitter"></i></a>
+  <a href="#" class="text-blue-700 dark:text-purple-400 text-xl icon-animate"><i class="fab fa-linkedin"></i></a>
+  <a href="#" class="text-blue-700 dark:text-purple-400 text-xl icon-animate"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="text-gray-500 dark:text-gray-400 text-sm">&copy; 2025 AI Hub. All rights reserved.</div>
+    </div>
+    <div class="mt-4 text-center text-xs text-gray-400 dark:text-gray-600">Designed for tech enthusiasts, researchers, and AI learners.</div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
